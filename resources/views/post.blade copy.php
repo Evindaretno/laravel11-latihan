@@ -10,10 +10,8 @@
 
     <p class="my-4 font-light">
       {{ $post['body'] }}</p>
-      <a href="/posts/{{ $post ['id'] }}" class="font-medium text-blue-500 hover:underline">&laquo; Back To Post</a>
+      <a href="/posts" class="font-medium text-blue-500 hover:underline">&laquo; Back To Post</a>
   </article>
 
-
-
-
+  
 </x-layout>
