@@ -33,8 +33,12 @@ class Post
 
     public static function find($slug)
     {
-        return Arr::first(Post::all(), function ($post) use ($slug) {
-            return $post['slug'] == $slug;
-        });
+        return Arr::first(static::all(), fn ($post) => $post['slug'] == $slug);
+
+        if (!$post) {
+            abort(404);
+        }
+
+        return $post;
     }
 }
